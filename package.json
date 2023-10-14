@@ -1,6 +1,6 @@
 {
   "name": "requires-walk",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Find 'require()' calls using babel parser.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

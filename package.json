@@ -1,0 +1,44 @@
+{
+  "name": "requires-walk",
+  "version": "0.0.0",
+  "description": "Find 'require()' calls using babel parser.",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "repository": "mrozio13pl/requires-walk",
+  "author": "mrozio13pl",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsup src/index.ts --cjsInterop --clean --dts --format esm,cjs",
+    "test": "uvu test .test.js$"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "require",
+    "import",
+    "modules",
+    "detective"
+  ],
+  "dependencies": {
+    "@babel/parser": "^7.23.0"
+  },
+  "devDependencies": {
+    "@babel/types": "^7.23.0",
+    "@mrozio/eslint-config": "^1.0.1",
+    "eslint": "^8.51.0",
+    "tdsm": "0.0.0-beta.2",
+    "tsup": "^7.2.0",
+    "typescript": "^5.2.2",
+    "uvu": "^0.5.6"
+  },
+  "packageManager": "^pnpm@8.9.0"
+}
